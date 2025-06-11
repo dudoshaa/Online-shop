@@ -30,7 +30,33 @@
             <li><a href="">Contact</a></li>
           </ul>
         </div>
-        <div class="navbar-end">
+        <div class="navbar-end gap-4">
+          <label class="input">
+            <svg
+              class="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </g>
+            </svg>
+            <input
+              type="search"
+              class="grow"
+              id="search"
+              placeholder="Search"
+            />
+            <kbd class="kbd kbd-sm">⌘</kbd>
+            <kbd class="kbd kbd-sm">K</kbd>
+          </label>
           <label class="toggle text-base-content">
             <input
               type="checkbox"
@@ -95,12 +121,18 @@
     <main>
       <section></section>
       <div class="align-elements">
+        <p
+          id="no-result"
+          class="text-black text-3xl text-center mt-24 hidden"
+        >
+          This product is not found :(
+        </p>
         <ul
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
           id="products-list"
         >
           <template>
-            <li class="shadow-2xl rounded-4xl mb-4 ">
+            <li class="card shadow-2xl rounded-4xl mb-4">
               <figure>
                 <img class="card-image" src="" />
               </figure>
@@ -114,6 +146,7 @@
                 <p class="description line-clamp-2"></p>
                 <p class="price line-through opacity-50"></p>
                 <p class="discount-price"></p>
+
                 <div class="card-actions justify-end">
                   <button
                     class="btn btn-primary fa-solid fa-cart-plus text-2xl"

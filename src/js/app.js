@@ -1,7 +1,10 @@
 import { products } from "./data.js";
+import formatNumber from "./formatNumber.js";
+import "./searchProduct.js"
 const html = document.documentElement;
 const themeTaggler = document.getElementById("theme-taggler");
 const theme = localStorage.getItem("theme");
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 if (theme) {
@@ -21,6 +24,17 @@ const productsList = document.getElementById("products-list");
 
 products.forEach((product) => {
   const clone = template.content.cloneNode(true);
+
+  const {
+    title,
+    description: _description,
+    thumbnail,
+    price: _price,
+    discountPercentage,
+    rating: _rating,
+    comments: _comments,
+  } = product;
+
   const cardImage = clone.querySelector(".card-image");
   const cardTitle = clone.querySelector(".card-title");
   const rating = clone.querySelector(".rating");
@@ -29,16 +43,13 @@ products.forEach((product) => {
   const discountPrice = clone.querySelector(".discount-price");
   const comments = clone.querySelector(".comments");
 
-  cardTitle.textContent = product.title;
-  description.textContent = product.description;
-  cardImage.src = product.thumbnail;
-  rating.textContent = `⭐${product.rating}`;
-  price.textContent = `${product.price}$`;
-  discountPrice.textContent = `${(
-    product.price -
-    (product.price * product.discountPercentage) / 100
-  ).toFixed(2)}$`;
-  comments.textContent = `(${product.comments}comments)`;
+  cardTitle.textContent = title;
+  description.textContent = _description;
+  cardImage.src = thumbnail;
+  rating.textContent = `⭐${_rating}`;
+  price.textContent = formatNumber(_price);
+  discountPrice.textContent = formatNumber(_price, discountPercentage);
+  comments.textContent = `(${_comments}comments)`;
 
   productsList.appendChild(clone);
 });
@@ -47,7 +58,7 @@ const images = [
   "../../images/Discount.png",
   "../../images/sale.png",
   "../../images/hello-summer.png",
-  "../../images/big-sale.png"
+  "../../images/big-sale.png",
 ];
 
 let index = 0;
@@ -62,4 +73,4 @@ setInterval(() => {
   }, 500);
 }, 4000);
 
-const image = document.querySelector("image");
+

@@ -500,7 +500,7 @@ export const products = [
     brand: "Dolce & Gabbana",
     sku: "FRA-DOL-DOL-009",
     weight: 6,
-    comments:56,
+    comments: 56,
     dimensions: {
       width: 27.28,
       height: 29.88,
@@ -562,7 +562,7 @@ export const products = [
     brand: "Gucci",
     sku: "FRA-GUC-GUC-010",
     weight: 7,
-    comments:78,
+    comments: 78,
     dimensions: {
       width: 20.92,
       height: 21.68,
@@ -624,7 +624,7 @@ export const products = [
     brand: "Annibale Colombo",
     sku: "FUR-ANN-ANN-011",
     weight: 10,
-    comments:178,
+    comments: 178,
     dimensions: {
       width: 28.16,
       height: 25.36,
@@ -686,7 +686,7 @@ export const products = [
     brand: "Annibale Colombo",
     sku: "FUR-ANN-ANN-012",
     weight: 6,
-    comments:99,
+    comments: 99,
     dimensions: {
       width: 12.75,
       height: 20.55,
@@ -748,7 +748,7 @@ export const products = [
     brand: "Furniture Co.",
     sku: "FUR-FUR-BED-013",
     weight: 2,
-    comments:44,
+    comments: 44,
     dimensions: {
       width: 13.47,
       height: 24.99,
@@ -810,7 +810,7 @@ export const products = [
     brand: "Knoll",
     sku: "FUR-KNO-KNO-014",
     weight: 10,
-    comments:156,
+    comments: 156,
     dimensions: {
       width: 13.81,
       height: 7.5,
@@ -872,7 +872,7 @@ export const products = [
     brand: "Bath Trends",
     sku: "FUR-BAT-WOO-015",
     weight: 10,
-    comments:101,
+    comments: 101,
     dimensions: {
       width: 7.98,
       height: 8.88,
@@ -933,7 +933,7 @@ export const products = [
     tags: ["fruits"],
     sku: "GRO-BRD-APP-016",
     weight: 9,
-    comments:97,
+    comments: 97,
     dimensions: {
       width: 13.66,
       height: 11.01,
@@ -990,7 +990,7 @@ export const products = [
     tags: ["meat"],
     sku: "GRO-BRD-BEE-017",
     weight: 10,
-    comments:167,
+    comments: 167,
     dimensions: {
       width: 18.9,
       height: 5.77,
@@ -1049,7 +1049,7 @@ export const products = [
     tags: ["pet supplies", "cat food"],
     sku: "GRO-BRD-FOO-018",
     weight: 10,
-    comments:49,
+    comments: 49,
     dimensions: {
       width: 18.08,
       height: 9.26,
@@ -1108,7 +1108,7 @@ export const products = [
     tags: ["meat"],
     sku: "GRO-BRD-CHI-019",
     weight: 1,
-    comments:16,
+    comments: 16,
     dimensions: {
       width: 11.03,
       height: 22.11,
@@ -1168,7 +1168,7 @@ export const products = [
     tags: ["cooking essentials"],
     sku: "GRO-BRD-COO-020",
     weight: 5,
-    comments:87,
+    comments: 87,
     dimensions: {
       width: 19.95,
       height: 27.54,
@@ -1227,7 +1227,7 @@ export const products = [
     tags: ["vegetables"],
     sku: "GRO-BRD-CUC-021",
     weight: 4,
-    comments:161,
+    comments: 161,
     dimensions: {
       width: 12.8,
       height: 28.38,
@@ -1286,7 +1286,7 @@ export const products = [
     tags: ["pet supplies", "dog food"],
     sku: "GRO-BRD-FOO-022",
     weight: 10,
-    comments:133,
+    comments: 133,
     dimensions: {
       width: 16.93,
       height: 27.15,
@@ -1345,7 +1345,7 @@ export const products = [
     tags: ["dairy"],
     sku: "GRO-BRD-EGG-023",
     weight: 2,
-    comments:68,
+    comments: 68,
     dimensions: {
       width: 11.42,
       height: 7.44,
@@ -1402,7 +1402,7 @@ export const products = [
     tags: ["seafood"],
     sku: "GRO-BRD-FIS-024",
     weight: 6,
-    comments:95,
+    comments: 95,
     dimensions: {
       width: 14.95,
       height: 26.31,
@@ -1461,7 +1461,7 @@ export const products = [
     tags: ["vegetables"],
     sku: "GRO-BRD-GRE-025",
     weight: 2,
-    comments:58,
+    comments: 58,
     dimensions: {
       width: 15.33,
       height: 26.65,
@@ -1520,7 +1520,7 @@ export const products = [
     tags: ["vegetables"],
     sku: "GRO-BRD-GRE-026",
     weight: 7,
-    comments:87,
+    comments: 87,
     dimensions: {
       width: 15.38,
       height: 18.12,
@@ -1579,7 +1579,7 @@ export const products = [
     tags: ["condiments"],
     sku: "GRO-BRD-HON-027",
     weight: 2,
-    comments:65,
+    comments: 65,
     dimensions: {
       width: 9.28,
       height: 21.72,
@@ -1638,7 +1638,7 @@ export const products = [
     tags: ["desserts"],
     sku: "GRO-BRD-CRE-028",
     weight: 1,
-    comments:33,
+    comments: 33,
     dimensions: {
       width: 14.83,
       height: 15.07,
@@ -1700,7 +1700,7 @@ export const products = [
     tags: ["beverages"],
     sku: "GRO-BRD-JUI-029",
     weight: 1,
-    comments:88,
+    comments: 88,
     dimensions: {
       width: 18.56,
       height: 21.46,
@@ -1757,7 +1757,7 @@ export const products = [
     tags: ["fruits"],
     sku: "GRO-BRD-KIW-030",
     weight: 5,
-    comments:67,
+    comments: 67,
     dimensions: {
       width: 19.4,
       height: 18.67,
