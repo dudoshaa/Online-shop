@@ -1,9 +1,30 @@
 import { products } from "./data.js";
-import formatNumber from "./formatNumber.js";
-import "./searchProduct.js"
+import {renderUi} from "./renderUi.js"
+import "./searchProduct.js";
+const priceSort = document.getElementById("price-sort");
 const html = document.documentElement;
 const themeTaggler = document.getElementById("theme-taggler");
 const theme = localStorage.getItem("theme");
+
+
+renderUi(products)
+
+priceSort.addEventListener("change", (e) => {
+  const price =
+    e.target.options[e.target.selectedIndex].getAttribute("data-price");
+  const productsForSorting = [...products];
+  if (price == "low") {
+   const newSort= productsForSorting.sort((a, b) => {
+    return  a.price - b.price;
+    });
+    renderUi(newSort)
+  }else if(price=="hight"){
+    const newSort= productsForSorting.sort((a, b) => {
+      return  b.price - a.price;
+      });
+      renderUi(newSort)
+  }
+});
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -19,40 +40,7 @@ themeTaggler.addEventListener("click", () => {
   themeTaggler.checked = html.dataset.theme == "synthwave" ? true : false;
 });
 
-const template = document.querySelector("template");
-const productsList = document.getElementById("products-list");
 
-products.forEach((product) => {
-  const clone = template.content.cloneNode(true);
-
-  const {
-    title,
-    description: _description,
-    thumbnail,
-    price: _price,
-    discountPercentage,
-    rating: _rating,
-    comments: _comments,
-  } = product;
-
-  const cardImage = clone.querySelector(".card-image");
-  const cardTitle = clone.querySelector(".card-title");
-  const rating = clone.querySelector(".rating");
-  const description = clone.querySelector(".description");
-  const price = clone.querySelector(".price");
-  const discountPrice = clone.querySelector(".discount-price");
-  const comments = clone.querySelector(".comments");
-
-  cardTitle.textContent = title;
-  description.textContent = _description;
-  cardImage.src = thumbnail;
-  rating.textContent = `⭐${_rating}`;
-  price.textContent = formatNumber(_price);
-  discountPrice.textContent = formatNumber(_price, discountPercentage);
-  comments.textContent = `(${_comments}comments)`;
-
-  productsList.appendChild(clone);
-});
 
 const images = [
   "../../images/Discount.png",
@@ -72,5 +60,3 @@ setInterval(() => {
     banner.style.opacity = 1;
   }, 500);
 }, 4000);
-
-

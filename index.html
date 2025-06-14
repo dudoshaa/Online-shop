@@ -31,6 +31,11 @@
           </ul>
         </div>
         <div class="navbar-end gap-4">
+          <select id="price-sort" class="select">
+            <option disabled selected>Narx bo'yicha saralash</option>
+            <option data-price="hight">Eng qimmati</option>
+            <option data-price="low">Eng arzoni</option>
+          </select>
           <label class="input">
             <svg
               class="h-[1em] opacity-50"
@@ -57,6 +62,10 @@
             <kbd class="kbd kbd-sm">⌘</kbd>
             <kbd class="kbd kbd-sm">K</kbd>
           </label>
+          <div class="indicator">
+            <span id="products-counter" class="indicator-item badge badge-primary badge-sm">0</span>
+            <i class="fa-solid fa-cart-shopping text-3xl"></i>
+          </div>
           <label class="toggle text-base-content">
             <input
               type="checkbox"
@@ -119,43 +128,44 @@
       </aside>
     </header>
     <main>
-      <section></section>
-      <div class="align-elements">
-        <p id="no-result" class="text-3xl text-center mt-24 hidden">
-          This product is not found :(
-        </p>
-        <ul
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-          id="products-list"
-        >
-          <template>
-            <li
-              class="card border-[0.5px] rounded-4xl mb-4 hover:shadow-2xl transition-all"
-            >
-              <figure>
-                <img class="card-image" src="" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title font-bold text-xl"></h2>
-                <div class="flex">
-                  <p class="rating opacity-50"></p>
-                  <p class="comments opacity-50"></p>
-                </div>
+      <section>
+        <div class="align-elements">
+          <p id="no-result" class="text-3xl text-center mt-24 hidden">
+            This product is not found :(
+          </p>
+          <ul
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            id="products-list"
+          >
+            <template>
+              <li
+                class="card border-[0.5px] rounded-4xl mb-4 hover:shadow-2xl transition-all"
+              >
+                <figure>
+                  <img class="card-image" src="" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title font-bold text-xl"></h2>
+                  <div class="flex">
+                    <p class="rating opacity-50"></p>
+                    <p class="comments opacity-50"></p>
+                  </div>
 
-                <p class="description line-clamp-2"></p>
-                <p class="price line-through opacity-50"></p>
-                <p class="discount-price"></p>
+                  <p class="description line-clamp-2"></p>
+                  <p class="price line-through opacity-50"></p>
+                  <p class="discount-price"></p>
 
-                <div class="card-actions justify-end">
-                  <button
-                    class="btn btn-primary fa-solid fa-cart-plus text-2xl"
-                  ></button>
+                  <div class="card-actions justify-end">
+                    <button
+                      class="btn btn-primary buy-button"
+                    ><i class="fa-solid fa-cart-plus text-2xl"></i></button>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </template>
-        </ul>
-      </div>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer class="bg-neutral">
       <div
